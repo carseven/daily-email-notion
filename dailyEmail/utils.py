@@ -1,17 +1,21 @@
-import datetime
+from dateutil.parser import parse
 
 
 def decodeDatabase(database: dict) -> list[dict[str, str]]:
     db = []
-    for row in database["results"]:
-        row_properties = {}
-        for column in row["properties"].keys():
-            row_properties[column] = retrievePropertyValue(
-                column,
-                row
-            )
-        db.append(row_properties)
-    return db
+    try:
+        for row in database["results"]:
+            row_properties = {}
+            for column in row["properties"].keys():
+                row_properties[column] = retrievePropertyValue(
+                    column,
+                    row
+                )
+            row_properties['url'] = row['url']
+            db.append(row_properties)
+        return db
+    except KeyError:
+        return []
 
 
 def retrievePropertyValue(property: str, row: dict) -> str:
@@ -31,15 +35,21 @@ def retrievePropertyValue(property: str, row: dict) -> str:
         value = row["properties"][property]["number"]
 
     if row["properties"][property]["type"] == "date":
-        date = row["properties"][property]["date"]["start"]
+        iso_str = row["properties"][property]["date"]["start"]
         try:
-            # TODO: Formatear correctamente la fecha
-            date = datetime.datetime.strptime(date, "%Y-%m-%dT%H:%M:%S%z")
+            if len(iso_str) > 10:
+                value = parse(iso_str).strftime("%Y-%m-%d  %I:%M %p")
+            else:
+                value = iso_str
         except ValueError:
-            value = date
+            value = iso_str
 
     if row["properties"][property]["type"] == "select":
         value = row["properties"][property]["select"]["name"]
+
+    if row["properties"][property]["type"] == "formula":
+        eq_type = row["properties"][property]["formula"]["type"]
+        value = row["properties"][property]["formula"][eq_type]
 
     return str(value)
 
@@ -70,8 +80,14 @@ def debugDatabaseObject(database, flag=False):
 
             if row["properties"][columna]["type"] == "date":
                 column_value = row["properties"][columna]["date"]["start"]
-            print(f"{columna} -> {column_value}")
 
+            if row["properties"][columna]["type"] == "formula":
+                eq_type = row["properties"][columna]["formula"]["type"]
+                if eq_type == 'date':
+                    column_value = row["properties"][columna]["formula"][eq_type]['start']
+                column_value = row["properties"][columna]["formula"][eq_type]
+
+            print(f"{columna} -> {column_value}")
         print("----------------\n")
         count += 1
 

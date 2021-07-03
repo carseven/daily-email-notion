@@ -1,11 +1,11 @@
 
-import os
 from service import retrieveStoicQuote, retrieveNotionDatabase
 import utils
 from tokens import SECRETS
 from send_email import send_email
-import html
-
+import html_email as html
+import datetime
+from datetime import timezone
 # Notion api config
 password = f"Bearer {SECRETS['notion_test_token']}"
 headers = {
@@ -13,6 +13,10 @@ headers = {
     "Notion-version": "2021-05-13"
 }
 
+tomorrow = (
+    datetime.datetime.now(timezone.utc) +
+    datetime.timedelta(days=1)
+).astimezone().isoformat()
 query = {
     "filter": {
         "and": [
@@ -25,11 +29,21 @@ query = {
             {
                 "property": "Due",
                 "date": {
-                    "next_week": {}
+                    "before": tomorrow
                 }
             }
         ]
-    }
+    },
+    "sorts": [
+        {
+            "property": "Due",
+            "direction": "ascending"
+        },
+        {
+            "property": "State",
+            "direction": "descending"
+        }
+    ]
 }
 
 # Notion api database block http request
@@ -41,14 +55,15 @@ database = retrieveNotionDatabase.retrieveDatabase(
 )
 
 # Print retrieve database data
-utils.debugDatabaseObject(database)
+# utils.debugDatabaseObject(database)
 
 # Get data we want from database.json object
 database_list = utils.decodeDatabase(database)
 dbProperties = utils.databaseProperties(database_list)
 
 # Filter columns of the database
-dbProperties = ['State', 'Task', 'Project', 'Due', 'Next Due']
+dbProperties = ['State', 'Task', 'Api-projects', 'Due',
+                'Kanban - State', 'Priority', 'Type']
 # Data to html table
 title = "\n".join(html.html_table_column(dbProperties))
 rows = "\n".join(html.html_table_row(
@@ -61,11 +76,12 @@ table_html = html.construct_html_table(title, rows)
 author, stoic_quote = retrieveStoicQuote.random_stoic_quote()
 
 html_msg = html.construct_html_msg(
-    table_html, html.style,
+    table_html,
+    html.style,
     html.quote_html(author, stoic_quote)  # Format stoic quote to html
 )
 
-utils.save_html(html_msg)
+# utils.save_html(html_msg)
 
 # Send email with html msg
 send_email(

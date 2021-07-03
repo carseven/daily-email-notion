@@ -130,4 +130,5 @@ dmypy.json
 
 # Project ignores
 dailyEmail/tokens.py
+dailyEmail/saved-data/
 .vscode

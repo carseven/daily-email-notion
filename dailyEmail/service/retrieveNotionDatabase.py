@@ -16,7 +16,6 @@ def retrieveDatabase(
 
     # POST
     response = requests.post(url=url, headers=headers, json=query)
-    print(response.headers['content-type'])
     if response.status_code == 200:
         database = response.json()
 
@@ -26,8 +25,5 @@ def retrieveDatabase(
 
         return database
     else:
-        print(f"Error {response.status_code} with:")
-        print(f"Url: {url}")
-        print(f"Headers: {headers}")
-        print(f"Query: {query}")
+        print(f"Error {response.status_code} with query: {query}")
         return dict()

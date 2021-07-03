@@ -11,7 +11,11 @@ def html_table_row(lista_filas, lista_columns):
         for columna in lista_columns:
             if columna not in fila:
                 fila[columna] = ""
-            yield f"\t\t<td>{fila[columna]}</td>"
+            if columna in fila and columna == 'Task':
+                href = "href=\"" + fila['url'] + "\""
+                yield f"\t\t<td><a {href}>{fila[columna]}</a></td>"
+            else:
+                yield f"\t\t<td>{fila[columna]}</td>"
         yield "\t    </tr>"
 
 
