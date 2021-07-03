@@ -21,7 +21,7 @@ def retrieveDatabase(
         database = response.json()
 
         if save_to_json:
-            with open("./daily-email/saved-data/database.json", "w", encoding="utf8") as f:
+            with open("./dailyEmail/saved-data/database.json", "w", encoding="utf8") as f:
                 json.dump(database, f, ensure_ascii=False)
 
         return database

@@ -1,10 +1,10 @@
 
 import os
-from dailyEmail.service import retrieveStoicQuote, retrieveNotionDatabase
-import dailyEmail.utils as utils
-from dailyEmail.tokens import SECRETS
-from dailyEmail.send_email import send_email
-import dailyEmail.html as html
+from service import retrieveStoicQuote, retrieveNotionDatabase
+import utils
+from tokens import SECRETS
+from send_email import send_email
+import html
 
 # Notion api config
 password = f"Bearer {SECRETS['notion_test_token']}"

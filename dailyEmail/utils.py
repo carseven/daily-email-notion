@@ -86,6 +86,6 @@ def databaseProperties(database: list) -> list[str]:
 
 
 def save_html(html_msg: str):
-    with open("./daily-email/saved-data/email-msg.html", "w", encoding="utf8") as f:
+    with open("./dailyEmail/saved-data/email-msg.html", "w", encoding="utf8") as f:
         f.write(html_msg)
         f.close()
