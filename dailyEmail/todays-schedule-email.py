@@ -50,7 +50,7 @@ query = {
 database = retrieveNotionDatabase.retrieveDatabase(
     databaseId=SECRETS['database_id'],
     headers=headers,
-    save_to_json=True,
+    save_to_json=False,
     query=query
 )
 
