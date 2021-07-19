@@ -88,10 +88,10 @@ SECRETS = {
 ***Table information:***
 By default the email table will print all the columns/properties from the notion database. If we need just to print some of the columns set the ```dbProperties``` list with the name of the columns we want to print.
 
-    Be aware of the order, beacause it will be use the order from the list. We could re-order the list if we want.
-    ```python
-    dbProperties = ['State', 'Task', 'Api-projects', 'Due', 'Kanban - State', 'Priority', 'Type']
-    ```
+Be aware of the order, beacause it will be use the order from the list. We could re-order the list if we want.
+```python
+dbProperties = ['State', 'Task', 'Api-projects', 'Due', 'Kanban - State', 'Priority', 'Type']
+```
 
 ***Style:***
 If we want to change the style of the table you could modify the style string from ```dailyEmail/html.py```. In my case, I use the following tutorial as a  [reference](https://dev.to/dcodeyt/creating-beautiful-html-tables-with-css-428l)
