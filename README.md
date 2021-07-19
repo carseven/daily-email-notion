@@ -22,7 +22,7 @@ Add lincense icon and linkedin icon
         <a href="#configuration">Configuration</a>
         <ul>
             <li><a href="#installing-dependencies">Installing dependencies</a></li>
-            <li><a href="#installation">Notion configuration</a></li>
+            <li><a href="#notion-configuration">Notion configuration</a></li>
             <li><a href="#tokens-secret-file">Tokens secret file</a></li>
             <li><a href="#github-action">Github action</a></li>
         </ul>
