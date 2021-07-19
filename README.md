@@ -51,8 +51,13 @@ Explicar las funcionalidades que se han añadido y explicar el sistema de notion
 ## Configuration
 
 ### Installing dependencies
+Update pip:
 ```sh
 python -m pip install --upgrade pip
+```
+
+Install dependencias via pip:
+```sh
 pip install requests python-dateutil
 ```
 ### Notion configuration
