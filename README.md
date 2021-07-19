@@ -12,34 +12,35 @@
 
 Add lincense icon and linkedin icon
 
-<summary>Table of Contents</summary>
-    <ol>
-        <li>
-            <a href="#about-the-project">About the project</a>
-        </li>
-        <li>
-            <a href="#configuration">Configuration</a>
-            <ul>
-                <li><a href="#installing-dependencies">Installing dependencies</a></li>
-                <li><a href="#installation">Notion configuration</a></li>
-                <li><a href="#tokens-secret-file">Tokens secret file</a></li>
-                <li><a href="#github-action">Github action</a></li>
-            </ul>
-        </li>
-        <li>
-            <a href="#usage-and-personalization">Usage and presonalization</a>
-            <ul>
-                <li><a href="#installing-dependencies">Installing dependencies</a></li>
-                <li><a href="#notion-api-query">Notion api query</a></li>
-                <li><a href="#email-personalization">Email personalization</a></li>
-            </ul>
-        </li>
-        <li><a href="#contributing">Contributing</a></li>
-        <li><a href="#contributing">Contributing</a></li>
-        <li><a href="#license">License</a></li>
-        <li><a href="#contact">Contact</a></li>
-        <li><a href="#acknowledgements">References</a></li>
-  </ol>
+## Table of contents
+<!-- <summary>Table of Contents</summary> -->
+<ol>
+    <li>
+        <a href="#about-the-project">About the project</a>
+    </li>
+    <li>
+        <a href="#configuration">Configuration</a>
+        <ul>
+            <li><a href="#installing-dependencies">Installing dependencies</a></li>
+            <li><a href="#installation">Notion configuration</a></li>
+            <li><a href="#tokens-secret-file">Tokens secret file</a></li>
+            <li><a href="#github-action">Github action</a></li>
+        </ul>
+    </li>
+    <li>
+        <a href="#usage-and-personalization">Usage and presonalization</a>
+        <ul>
+            <li><a href="#installing-dependencies">Installing dependencies</a></li>
+            <li><a href="#notion-api-query">Notion api query</a></li>
+            <li><a href="#email-personalization">Email personalization</a></li>
+        </ul>
+    </li>
+    <li><a href="#contributing">Contributing</a></li>
+    <li><a href="#contributing">Contributing</a></li>
+    <li><a href="#license">License</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <li><a href="#acknowledgements">References</a></li>
+</ol>
 
 ## About The Project
 Explicar las funcionalidades que se han añadido y explicar el sistema de notion. Hacer referencia al video de 
