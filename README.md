@@ -10,7 +10,31 @@
     <img width="40%" src="doc/logo.png"/>
 </p>
 
-Add lincense icon and linkedin icon
+
+
+
+<div style="overflow: auto">
+
+<div style="float: left;">
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)]()
+</div>
+
+<div style="float: right">
+
+<img alt="GitHub Repo stars" src="https://img.shields.io/github/stars/carseven/daily-email-notion?style=social">
+</div>
+<div style="float:right; margin-right: 10px">
+
+![GitHub followers](https://img.shields.io/github/followers/carseven?style=social)
+</div>
+
+<div style="float: right; margin-right: 10px">
+
+[![LinkedIn](https://img.shields.io/badge/follow-linkedin-0077b5.svg?style=flat-square)](hhttps://opensource.org/licenses/MIT)
+</div>
+</div>
+
 
 ## Table of contents
 <!-- <summary>Table of Contents</summary> -->
@@ -28,7 +52,7 @@ Add lincense icon and linkedin icon
         </ul>
     </li>
     <li>
-        <a href="#usage-and-personalization">Usage and presonalization</a>
+        <a href="#usage-and-personalization">Usage and personalization</a>
         <ul>
             <li><a href="#installing-dependencies">Installing dependencies</a></li>
             <li><a href="#notion-api-query">Notion api query</a></li>
@@ -44,7 +68,7 @@ Add lincense icon and linkedin icon
 Explicar las funcionalidades que se han añadido y explicar el sistema de notion. Hacer referencia al video de 
 <span>
     <p align="center">
-        <img src="doc/email-result-black.png" alt="email-result-black" width="40%"/>
+        <img style="margin-right: 10px" src="doc/email-result-black.png" alt="email-result-black" width="41.8%"/>
         <img src="doc/email-result-white.png" alt="email-result-white" width="40%"/>
     <p>
 </span>
@@ -56,11 +80,12 @@ Update pip:
 python -m pip install --upgrade pip
 ```
 
-Install dependencias via pip:
+Install dependencies via pip:
 ```sh
 pip install requests python-dateutil
 ```
 ### Notion configuration
+Follow the official Notion api setup guide here
 1. Created notion integration
 2. Invite integration
     * ⚠ Warning: Also relation databases, to have access to their information
@@ -93,7 +118,7 @@ SECRETS = {
 ***Table information:***
 By default the email table will print all the columns/properties from the notion database. If we need just to print some of the columns set the ```dbProperties``` list with the name of the columns we want to print.
 
-Be aware of the order, beacause it will be use the order from the list. We could re-order the list if we want.
+Be aware of the order, because it will be use the order from the list. We could re-order the list if we want.
 ```python
 dbProperties = ['State', 'Task', 'Api-projects', 'Due', 'Kanban - State', 'Priority', 'Type']
 ```
