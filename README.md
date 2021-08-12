@@ -12,28 +12,9 @@
 
 
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![LinkedIn](https://img.shields.io/badge/follow-linkedin-0077b5.svg?style=flat-square)](https://www.linkedin.com/in/carles-serra-vendrell/)
 
-<div style="overflow: auto">
-
-<div style="float: left;">
-
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)]()
-</div>
-
-<div style="float: right">
-
-<img alt="GitHub Repo stars" src="https://img.shields.io/github/stars/carseven/daily-email-notion?style=social">
-</div>
-<div style="float:right; margin-right: 10px">
-
-![GitHub followers](https://img.shields.io/github/followers/carseven?style=social)
-</div>
-
-<div style="float: right; margin-right: 10px">
-
-[![LinkedIn](https://img.shields.io/badge/follow-linkedin-0077b5.svg?style=flat-square)](hhttps://opensource.org/licenses/MIT)
-</div>
-</div>
 
 
 ## Table of contents
