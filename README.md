@@ -18,31 +18,17 @@
 
 
 ## Table of contents
-<!-- <summary>Table of Contents</summary> -->
-<ol>
-    <li>
-        <a href="#about-the-project">About the project</a>
-    </li>
-    <li>
-        <a href="#configuration">Configuration</a>
-        <ul>
-            <li><a href="#installing-dependencies-🛠">Installing dependencies 🛠</a></li>
-            <li><a href="#notion">Notion ⚙️</a></li>
-            <li><a href="#tokens-secret-file-🔐">Tokens secret file 🔐</a></li>
-            <li><a href="#github-action">Github action 🔄</a></li>
-        </ul>
-    </li>
-    <li>
-        <a href="#usage-and-personalization">Usage and personalization</a>
-        <ul>
-            <li><a href="#filter-and-sort-queries">Filter and sort queries 🔎</a></li>
-            <li><a href="#email-template-personalization">Email personalization 🎨</a></li>
-        </ul>
-    </li>
-    <li><a href="#contributing">Contributing</a></li>
-    <li><a href="#contact">Contact</a></li>
-    <li><a href="#references">References</a></li>
-</ol>
+- [About The Project](#about-the-project)
+- [Configuration](#configuration)
+  * [Installing dependencies 🛠](#installing-dependencies-🛠)
+  * [Notion ⚙️](#notion-⚙️)
+  * [Tokens secret file 🔐](#tokens-secret-file-🔐)
+  * [Github action 🔄](#github-action-🔄)
+- [Usage and personalization](#usage-and-personalization)
+  * [Filter and sort queries 🔎](#filter-and-sort-queries-🔎)
+  * [Email template personalization 🎨](#email-template-personalization-🎨)
+- [Contributing](#contributing)
+- [References](#references)
 
 ## About The Project
 I ❤️ [Notion](https://www.notion.so)! I use it daily to organize my whole life, take notes, my reading list and a ton of other things.
