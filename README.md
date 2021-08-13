@@ -20,13 +20,13 @@
 ## Table of contents
 - [About The Project](#about-the-project)
 - [Configuration](#configuration)
-  * [Installing dependencies 🛠](#installing-dependencies-🛠)
-  * [Notion ⚙️](#notion-⚙️)
-  * [Tokens secret file 🔐](#tokens-secret-file-🔐)
-  * [Github action 🔄](#github-action-🔄)
+  * [Installing dependencies 🛠](#installing-dependencies🛠)
+  * [Notion ⚙️](#notion⚙️)
+  * [Tokens secret file 🔐](#tokens-secret-file🔐)
+  * [Github action 🔄](#github-action🔄)
 - [Usage and personalization](#usage-and-personalization)
-  * [Filter and sort queries 🔎](#filter-and-sort-queries-🔎)
-  * [Email template personalization 🎨](#email-template-personalization-🎨)
+  * [Filter and sort queries 🔎](#filter-and-sort-queries🔎)
+  * [Email template personalization 🎨](#email-template-personalization🎨)
 - [Contributing](#contributing)
 - [References](#references)
 
@@ -47,7 +47,7 @@ This project retrieves the data from a database where I organized all my tasks, 
 
 ## Configuration
 
-### Installing dependencies 🛠
+### Installing dependencies🛠
 Update pip:
 ```sh
 python -m pip install --upgrade pip
@@ -57,12 +57,12 @@ Install dependencies via pip:
 ```sh
 pip install requests python-dateutil
 ```
-### Notion ⚙️
+### Notion⚙️
 Follow the official Notion api getting started guide [here](https://developers.notion.com/docs) to learn how to set up notion integrations.
 
 ⚠️  For having access to relation database columns/properties, you must share the integration in the related database.
 
-### Tokens secret file 🔐
+### Tokens secret file🔐
 Generated ```dailyEmail/tokens.py``` file with ```SECRET``` dictionary with the following properties:
 
 * **notion_test_token:** Notion integration token secret key.
@@ -89,7 +89,7 @@ SECRETS = {
 
 ⚠️ Make sure to include this file in the ```.gitignore``` to avoid upload sensible information to the repository.
 
-### Github action 🔄
+### Github action🔄
 1. In local, encode the content of the ```tokens.py``` using **base64**:
     ```sh
     base64 ./dailyEmail/tokens.py
@@ -103,7 +103,7 @@ SECRETS = {
 
 ## Usage and personalization
 
-### Filter and sort queries 🔎
+### Filter and sort queries🔎
 For changing the query filtering or sorting, just modify the query ```dict``` following the [api reference](https://developers.notion.com/reference/post-database-query) indications.
 
 If no filtering or sorting is need it, just delete the query ```dict``` from the ```dailyEmail/todays-schedule-email.py``` script.
@@ -140,7 +140,7 @@ query = {
 }
 ```
 
-### Email template personalization 🎨
+### Email template personalization🎨
 
 ***Table information:***
 By default the email table will print all the columns/properties from the notion database. If we need just to print some of the columns set the ```dbProperties``` list with the name of the columns we want to print.
