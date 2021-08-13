@@ -27,16 +27,16 @@
         <a href="#configuration">Configuration</a>
         <ul>
             <li><a href="#installing-dependencies-🛠">Installing dependencies 🛠</a></li>
-            <li><a href="#notion-⚙️">Notion ⚙️</a></li>
+            <li><a href="#notion">Notion ⚙️</a></li>
             <li><a href="#tokens-secret-file-🔐">Tokens secret file 🔐</a></li>
-            <li><a href="#github-action-🔄">Github action 🔄</a></li>
+            <li><a href="#github-action">Github action 🔄</a></li>
         </ul>
     </li>
     <li>
         <a href="#usage-and-personalization">Usage and personalization</a>
         <ul>
-            <li><a href="#filter-and-sort-queries-🔎">Filter and sort queries 🔎</a></li>
-            <li><a href="#email-template-personalization-🎨">Email personalization 🎨</a></li>
+            <li><a href="#filter-and-sort-queries">Filter and sort queries 🔎</a></li>
+            <li><a href="#email-template-personalization">Email personalization 🎨</a></li>
         </ul>
     </li>
     <li><a href="#contributing">Contributing</a></li>
