@@ -19,30 +19,30 @@ tomorrow = (
 ).astimezone().isoformat()
 query = {
     "filter": {
-        "and": [
-            {
-                "property": "Done",
-                "checkbox": {
-                    "equals": False
-                }
-            },
-            {
-                "property": "Due",
-                "date": {
-                    "before": tomorrow
-                }
-            }
-        ]
+        # "and": [
+        #     {
+        #         "property": "Done",
+        #         "checkbox": {
+        #             "equals": False
+        #         }
+        #     },
+        #     {
+        #         "property": "Due",
+        #         "date": {
+        #             "before": tomorrow
+        #         }
+        #     }
+        # ]
     },
     "sorts": [
-        {
-            "property": "Due",
-            "direction": "ascending"
-        },
-        {
-            "property": "State",
-            "direction": "descending"
-        }
+        # {
+        #     "property": "Due",
+        #     "direction": "ascending"
+        # },
+        # {
+        #     "property": "State",
+        #     "direction": "descending"
+        # }
     ]
 }
 
@@ -51,7 +51,7 @@ database = retrieveNotionDatabase.retrieveDatabase(
     databaseId=SECRETS['database_id'],
     headers=headers,
     save_to_json=False,
-    query=query
+    # query=query
 )
 
 # Print retrieve database data
